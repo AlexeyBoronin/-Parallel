@@ -25,7 +25,7 @@ ParallelLoopResult result = Parallel.ForEach<int>(
     Square);
 ParallelLoopResult result1 = Parallel.For(1, 10, Square1);
 if (!result1.IsCompleted)
-    Console.WriteLine($"Выполнение цикла завершено на итерации {result.LowestBreakIteration}");
+    Console.WriteLine($"Выполнение цикла завершено на итерации {result1.LowestBreakIteration}");
 void Square1(int n, ParallelLoopState pls)
 {
     if (n == 6) pls.Break();
